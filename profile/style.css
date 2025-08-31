@@ -1,0 +1,170 @@
+body {
+  background-color: #0d0d0d;
+  color: #e6e6fa;
+  font-family: 'Segoe UI', sans-serif;
+  scroll-behavior: smooth;
+}
+
+p{
+  color: white;
+        }
+/* Smooth fade-in for sections */
+section {
+  padding: 60px 0;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInUp 1s ease forwards;
+}
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Navbar with underline animation */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: rgba(20, 0, 30, 0.8);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(178, 102, 255, 0.3);
+}
+.nav-link {
+  position: relative;
+  transition: color 0.3s;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #b266ff;
+  left: 50%;
+  bottom: -4px;
+  transition: all 0.3s ease;
+}
+.nav-link:hover {
+  color: #b266ff !important;
+}
+.nav-link:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Gradient animated hero */
+header {
+  background: linear-gradient(-45deg, #4b0082, #1e0036, #2a004f, #000);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+}
+@keyframes gradientBG {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Animated gradient text for headings */
+h1, h2, h5 {
+  background: linear-gradient(90deg, #b266ff, #ff66cc, #b266ff);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textShine 3s linear infinite;
+}
+@keyframes textShine {
+  to { background-position: 200% center; }
+}
+
+/* Profile Picture Glow */
+.profile-pic {
+  width: 160px; height: 160px;
+  object-fit: cover; border-radius: 50%;
+  border: 4px solid #b266ff;
+  box-shadow: 0 0 25px rgba(178, 102, 255, 0.5);
+  transition: 0.4s ease;
+}
+.profile-pic:hover {
+  transform: scale(1.12) rotate(2deg);
+  box-shadow: 0 0 40px rgba(178, 102, 255, 0.8);
+}
+
+/* Glassmorphism cards */
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(178, 102, 255, 0.3);
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 0 25px rgba(178, 102, 255, 0.4);
+}
+
+/* Carousel rounded images */
+.carousel-inner img {
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(178, 102, 255, 0.5);
+}
+
+/* Tabs */
+.nav-tabs .nav-link {
+  border: none;
+  color: #ccc;
+}
+.nav-tabs .nav-link.active {
+  background-color: #b266ff;
+  color: white !important;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(178, 102, 255, 0.6);
+}
+
+/* Progress Bars with Glow */
+.progress {
+  background-color: rgba(255,255,255,0.1);
+  height: 25px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.progress-bar {
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(178, 102, 255, 0.7);
+}
+
+/* Inputs */
+input, textarea {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(178, 102, 255, 0.4) !important;
+  color: white !important;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+input:focus, textarea:focus {
+  box-shadow: 0 0 15px #b266ff;
+}
+
+/* Buttons */
+button, .btn {
+  background: linear-gradient(90deg, #b266ff, #ff66cc);
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 30px;
+  padding: 10px 20px;
+  transition: 0.4s ease;
+}
+button:hover, .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px rgba(178, 102, 255, 0.8);
+}
+
+/* Footer */
+footer {
+  background-color: #0a0a0a;
+  border-top: 1px solid rgba(178, 102, 255, 0.2);
+}
+footer .btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid #b266ff;
+}
