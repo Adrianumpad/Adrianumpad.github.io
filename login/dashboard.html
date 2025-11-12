@@ -112,6 +112,63 @@
       from { opacity: 0; transform: translateY(-10px); }
       to { opacity: 1; transform: translateY(0); }
     }
+      /* Existing styles ... keep everything above this intact */
+
+  /* Responsive Styles */
+  @media (max-width: 1024px) {
+    .dashboard {
+      grid-template-columns: 200px 1fr; /* smaller sidebar for tablets */
+    }
+    .sidebar ul li a {
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .dashboard {
+      grid-template-columns: 1fr; /* stack sidebar on top of main content */
+      height: auto;
+    }
+    .sidebar {
+      width: 100%;
+      display: flex;
+      overflow-x: auto;
+      padding: 10px;
+    }
+    .sidebar ul {
+      display: flex;
+      flex-direction: row;
+      gap: 15px;
+    }
+    .sidebar ul li {
+      margin: 0;
+    }
+    .main {
+      padding: 15px;
+    }
+    .card {
+      padding: 15px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .navbar h1 {
+      font-size: 20px;
+    }
+    .navbar a {
+      font-size: 16px;
+    }
+    .sidebar ul li a {
+      font-size: 14px;
+      gap: 5px;
+    }
+    .card h3 {
+      font-size: 16px;
+    }
+    .main h2 {
+      font-size: 20px;
+    }
+  }
   </style>
 </head>
 <body>
